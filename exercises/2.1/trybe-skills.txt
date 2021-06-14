@@ -1,0 +1,7 @@
+O que irei aprender na Trybe?
+
+Unix
+
+Bash
+
+Git
