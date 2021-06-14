@@ -6,6 +6,9 @@ Bash
 
 Git
 
+NodeJS
+
 HTML 
 
 CSS
+
