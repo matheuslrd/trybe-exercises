@@ -1,0 +1,28 @@
+ol {
+    background-color: yellow;
+}
+
+li {
+    font-size: 20px;
+}
+
+.par {
+    color: green;
+}
+
+.impar {
+    text-transform: uppercase;
+}
+
+.header-font-red {
+    color: red;
+}
+
+.italic {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li em {
+    font-weight: bold;
+}
