@@ -8,3 +8,12 @@ ul li{
     list-style: none;
     display: inline-block;
 }
+
+table, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
