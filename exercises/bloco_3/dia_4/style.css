@@ -13,6 +13,7 @@ preto: #373737
     margin: 0;
     padding: 0;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -51,10 +52,10 @@ body {
 /***** Conteúdo Principal ******/
 
 .main-content {
-    border: 1px solid red;
     width: 60%;
+    min-width: 300px;
     margin: 60px 0px 0px 100px;
-    padding: 25px;
+    padding: 25px 25px 0px 25px;
     background-color: #F4F4F4;
 }
 
@@ -63,10 +64,88 @@ body {
 }
 
 .header {
-    border: 1px solid red;
     text-align: center;
     font-size: 1.3em;
 }
+
+.header h1{
+    line-height: 1em;
+    color: #282828;
+}
+
+.header img {
+    margin: 35px 0px 0px 0px;
+}
+
+/***** Artigo Stomatopoda ******/
+
+.infos {
+    padding: 25px 0px;
+}
+
+.conteiner-info-gerais {
+    width: 50%;
+    float: left;
+    margin-top: 70px;
+}
+
+.conteiner-info-gerais h2 {
+    font-size: 2em;
+}
+
+.conteiner-info-gerais p {
+    font-size: 1em;
+}
+
+.itable-informations{
+    width: 40%;
+    float: right;
+}
+
+.facts-stomatopoda h2{
+    font-size: 2em;
+}
+
+.facts-stomatopoda h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.facts-stomatopoda p {
+    font-size: 1em;
+    text-align: justify;
+}
+
+.references{
+    margin: 25px 0px 0px 0px;
+    font-size: 1.2em;
+}
+
+.references p{
+    font-size: .9em;
+}
+
+.footer {
+    color: #E7E7E7;
+    text-align: center;
+    background-color: #373737;
+}
+
+a:link {
+    color: rgb(0, 0, 255);
+    font-weight: bold;
+}
+
+a:visited {
+    color: rgb(0, 0, 255);
+}
+
+a:hover {
+    color: rgb(122, 122, 238);
+    transition: .1s all ease-out;
+}
+
 
 table, th, td {
     border: 1px solid #000000;
@@ -80,4 +159,8 @@ th, td {
 h2, h3, h4 {
     font-family: 'Benne', serif;
     font-weight: 500;
+}
+
+.clear {
+    clear: both;
 }
