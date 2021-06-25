@@ -112,16 +112,22 @@ for (let index = 0; index < numbers.length; index += 1) {
     }
 }
 
-console.log(menor);
+console.log(menor); */
 
 
 
 let lista = [];
+let divisao = 0;
+
 
 for (let index = 1; index <= 25; index+= 1) {
     lista.push(index);
 }
 
-console.log(lista);
+for(let index = 0; index < lista.length; index += 1) {
+    let guardarNumero = lista[index];
 
-*/
+    divisao = guardarNumero / 2;
+
+    console.log('A divisão de: ' + guardarNumero + ' é igual a: ' + divisao );
+}
