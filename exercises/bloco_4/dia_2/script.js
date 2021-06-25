@@ -64,7 +64,7 @@ if( media > 20){
 
 /***********************
   Exercicio Número 5
-***********************/
+***********************
 
 let maiorNumero = 0;
 
@@ -78,4 +78,50 @@ for (let index = 0; index < numbers.length; index += 1) {
 
 console.log(maiorNumero);
 
+*/
 
+
+/***********************
+  Exercicio Número 6
+***********************
+
+
+
+for(let cont = 0; cont < numbers.length; cont += 1) {
+    let modulo = numbers[cont] % 2;
+
+    if(modulo == 1) {
+        console.log( numbers[cont] );
+    }
+}
+
+*/
+
+/***********************
+  Exercicio Número 7
+***********************
+
+
+let menor = 0;
+
+for (let index = 0; index < numbers.length; index += 1) {
+    let guardarNumero = numbers[index];
+
+    if(guardarNumero < guardarNumero) {
+        menor = guardarNumero;
+    }
+}
+
+console.log(menor);
+
+
+
+let lista = [];
+
+for (let index = 1; index <= 25; index+= 1) {
+    lista.push(index);
+}
+
+console.log(lista);
+
+*/
