@@ -31,3 +31,20 @@ function verificaMaiorIndice(array) {
 }
 
 console.log(verificaMaiorIndice([3, 5, 12, 8, 4, 13, 17]));
+
+
+
+function verificaMaiorIndice(array) {
+    let maiorIndice = 0;
+
+    for (let index = 0; index < array.length; index += 1) {
+        let guardarIndice = array[index];
+
+        if(guardarIndice > maiorIndice) {
+            maiorIndice = guardarIndice;
+        }
+    }
+    return array.indexOf(maiorIndice);
+}
+
+console.log(verificaMaiorIndice([3, 5, 12, 8, 4, 13, 17]));
