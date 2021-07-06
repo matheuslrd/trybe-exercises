@@ -19,11 +19,16 @@
       </div>
 
       <script>
-        document.querySelector('#primeiroFilhoDoFilho').innerHTML =  'Opa, um texto aqui de teste!';
+        let pai = document.querySelector('#pai');
 
-        document.querySelector('#pai').firstElementChild;
+        let elementIrmaoCreate = document.createElement('div');
+        elementIrmaoCreate.setAttribute('id', 'elementoIrmao');
+        pai.appendChild(elementIrmaoCreate);
 
-        document.querySelector('#elementoOndeVoceEsta').parentNode.style.backgroundColor = "red";
+        let divOndeEstou = document.querySelector('#elementoOndeVoceEsta');
+        let createChildDiv = document.createElement('div');
+        createChildDiv.setAttribute('id', 'divChild');
+        divOndeEstou.appendChild(createChildDiv);
       </script>
 </body>
 </html>
