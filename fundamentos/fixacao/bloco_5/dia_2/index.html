@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixação 5.2</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+
+      <script>
+        let pai = document.querySelector('#pai');
+
+        let elementIrmaoCreate = document.createElement('div');
+        elementIrmaoCreate.setAttribute('id', 'elementoIrmao');
+        pai.appendChild(elementIrmaoCreate);
+
+        let divOndeEstou = document.querySelector('#elementoOndeVoceEsta');
+        let createChildDiv = document.createElement('div');
+        createChildDiv.setAttribute('id', 'divChild');
+        divOndeEstou.appendChild(createChildDiv);
+      </script>
+</body>
+</html>
