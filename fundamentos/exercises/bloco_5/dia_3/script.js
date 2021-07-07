@@ -47,3 +47,18 @@ function createDezDays() {
 }
 
 createDezDays();
+
+function createButtonHolidays(string) {
+    let buttonsContainer = document.querySelector('.buttons-container');
+
+    if (string === 'Feriados') {
+        let createButton = document.createElement('button');
+        createButton.innerHTML = 'Feriados';
+        createButton.setAttribute('id', 'btn-holiday');
+
+        buttonsContainer.appendChild(createButton);
+    }
+
+}
+
+createButtonHolidays('Feriados');
