@@ -58,27 +58,37 @@ function createButtonHolidays(string) {
         buttonsContainer.appendChild(createButton);
 
         //Adiciona evento de click ao botão
-        createButton.addEventListener('click', colorChangeHolidays);
+        createButton.addEventListener('click', function () {
+            let listHolidays = document.querySelectorAll('.holiday');
+            
+            for (let index of listHolidays) {
+                let holidays = index;
+        
+                //Verificando se a cor já é azul, se sim, voltar para a anterior
+                holidays.style.transition = 'all .2s ease-out';
+                if( holidays.style.color ===  'blue' ) {
+                    holidays.style.color = '#666';
+                } else {
+                    holidays.style.color = 'blue';
+                };
+            };
+        });
     }
 
 }
 createButtonHolidays('Feriados');
 
-function colorChangeHolidays() {
-    let listHolidays = document.querySelectorAll('.holiday');
-    
-    for (let index of listHolidays) {
-        let holidays = index;
+function createButtonFriday(string) {
+    let buttonsContainer = document.querySelector('.buttons-container');
 
-        //Verificando se a cor já é azul, se sim, voltar para a anterior
-        holidays.style.transition = 'all .2s ease-out';
-        if( holidays.style.color ===  'blue' ) {
-            holidays.style.color = '#666';
-        } else {
-            holidays.style.color = 'blue';
-        };
-    };
+    let createButton = document.createElement('button');
+    createButton.innerHTML = string;
+    createButton.setAttribute('id', 'btn-friday');
+
+    buttonsContainer.appendChild(createButton);
 }
+
+createButtonFriday('Sexta-Feira');
 
 
 
