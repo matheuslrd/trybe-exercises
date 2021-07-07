@@ -8,7 +8,28 @@ const myWebpage = document.getElementById('my-spotrybefy');
  Copie esse arquivo e edite apenas ele;
  Crie uma função que adicione a classe 'tech' ao elemento selecionado;
 1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
- Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
+*/
+
+firstDiv.addEventListener('mouseover', classTech);
+firstDiv.addEventListener('mouseleave', removeClassTech);
+
+secondDiv.addEventListener('mouseover', classTech);
+secondDiv.addEventListener('mouseleave', removeClassTech);
+
+thirdDiv.addEventListener('mouseover', classTech);
+thirdDiv.addEventListener('mouseleave', removeClassTech);
+
+function classTech(evento) {
+    let addClass = evento.target;
+    addClass.classList.add('tech');
+}
+
+function removeClassTech(evento) {
+    let removeClass = evento.target;
+    removeClass.classList.remove('tech');
+}
+
+ /* Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 com a classe 'tech';
  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 redirecione para alguma página;
@@ -17,8 +38,7 @@ redirecione para alguma página;
 a cor do mesmo;
 
 Segue abaixo um exemplo do uso de event.target:
-*/
-
+ */
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
   event.target.innerText = 'Opção reiniciada';
