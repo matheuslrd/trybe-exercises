@@ -45,7 +45,6 @@ function createDezDays() {
         dezDaysList.appendChild(dayListItem);
     }
 }
-
 createDezDays();
 
 function createButtonHolidays(string) {
@@ -53,12 +52,34 @@ function createButtonHolidays(string) {
 
     if (string === 'Feriados') {
         let createButton = document.createElement('button');
-        createButton.innerHTML = 'Feriados';
+        createButton.innerHTML = string;
         createButton.setAttribute('id', 'btn-holiday');
 
         buttonsContainer.appendChild(createButton);
+
+        //Adiciona evento de click ao botão
+        createButton.addEventListener('click', colorChangeHolidays);
     }
 
 }
-
 createButtonHolidays('Feriados');
+
+function colorChangeHolidays() {
+    let listHolidays = document.querySelectorAll('.holiday');
+    
+    for (let index of listHolidays) {
+        let holidays = index;
+
+        //Verificando se a cor já é azul, se sim, voltar para a anterior
+        holidays.style.transition = 'all .2s ease-out';
+        if( holidays.style.color ===  'blue' ) {
+            holidays.style.color = '#666';
+        } else {
+            holidays.style.color = 'blue';
+        };
+    };
+}
+
+
+
+
