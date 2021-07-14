@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba( 149 , 164 , 189 , 74);
+}
+
+.tittle {
+  text-align: center;
+}
+
+.box {
+  border: 1px solid rgba( 109 , 120 , 138 , 54);
+  border-radius: 3px;
+  background: rgb(242, 242, 242);
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+}
