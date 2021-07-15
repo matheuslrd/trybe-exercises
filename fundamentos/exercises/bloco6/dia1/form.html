@@ -6,23 +6,70 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <!-- CABECALHO -->
-    <header class="tittle box">
-      <h1>Formulário de Currículo</h1>
-    </header>
 
     <!-- FORMULARIO -->
-    <form action="" id="formCurriculo" class="box" method="GET">
-      <fieldset form="formCurriculo">
-        <legend>Dados Pessoais</legend>
+    <form action="" id="formCurriculo" method="GET">
+       <!-- CABECALHO -->
+      <header class="tittle box">
+        <h1>Currículo</h1>
+      </header>
 
-        <label for="fullName">Nome Completo</label>
-        <input type="text" name="fullName" id="fullName" required maxlength="40" autofocus>
+      <div class="box" id="bloco1">
+        <fieldset class="fieldset-formated">
+          <legend>Dados Pessoais</legend>
 
+          <label for="fullName">Nome Completo:</label>
+          <input class="input-format" type="text" name="fullName" id="fullName" required maxlength="40" autofocus><br>
         
-      </fieldset>
+          <label for="email">Email:</label>
+          <input class="input-format" type="email" name="email" id="email" maxlength="50" required><br>
+
+          <label for="cpf">CPF:</label>
+          <input class="input-format" type="text" name="cpf" id="cpf" maxlength="11" required><br>
+
+          <label for="adress">Endereço:</label>
+          <input class="input-format" type="text" name="adress" id="adress" maxlength="200" required><br>
+
+          <label for="city">Cidade:</label>
+          <input class="input-format" type="text" name="city" id="city" maxlength="28" required><br>
+
+          <label for="states">Estado:</label><br>
+          <select name="states" id="states" class="input-format" required></select> 
+
+          <label class="radio-format" for="radioMoradaHome">Casa</label>
+          <input class="radio-format" type="radio" name="radioMorada" id="radioMoradaHome" checked>
+          <label class="radio-format" for="radioMoradaAp">Apartamento</label>
+          <input class="radio-format" type="radio" name="radioMorada" id="radioMoradaAp">
+        </fieldset>
+      </div>
+
+      <div class="box" id="bloco-2">
+        <fieldset class="fieldset-formated">
+          <legend>Dados Do Seu Ultimo Emprego</legend>
+
+          <label for="abstract">Resumo do seu curriculo:</label>
+          <textarea class="input-format" name="abstract" id="abstract" cols="30" rows="10" maxlength="1000" required></textarea>
+
+          <label for="office">Cargo:</label>
+          <input class="input-format" type="text" name="office" id="office" maxlength="40" required>
+
+          <label for="office-description">Descrição do Cargo:</label>
+          <input type="text" name="office-description" id="office-description" class="input-format" maxlength="500" required>
+
+          <label for="inittial-date-office">Data de Inicio:</label>
+          <input type="date" name="inittial-date-office" id="inittial-date-office" value="2021-04-25" class="input-format" required>
+        </fieldset>
+
+        <div class="button-submit">
+          <button type="submit" id="btn-submit">ENVIAR</button>
+        </div>
+      </div>
     </form>
     <!-- //FORMULARIO -->
+
+    <div class="box" id="form-consolitated">
+      
+    </div>
 
     <script src="script.js"></script>
   </body>
