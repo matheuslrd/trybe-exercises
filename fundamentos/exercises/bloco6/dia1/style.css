@@ -5,7 +5,7 @@
 }
 
 body {
-  background: rgba( 149 , 164 , 189 , 74);
+  background: rgba(149, 164, 189, 74);
 }
 
 .tittle {
@@ -13,7 +13,7 @@ body {
 }
 
 .box {
-  border: 1px solid rgba( 109 , 120 , 138 , 54);
+  border: 1px solid rgba(109, 120, 138, 54);
   border-radius: 3px;
   background: rgb(242, 242, 242);
   width: 80%;
@@ -52,4 +52,3 @@ body {
   height: 40px;
   margin: 10px 0;
 }
-
