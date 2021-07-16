@@ -64,5 +64,4 @@ function submitFormValidation(event) {
     }
   }
 }
-
 btnSubmit.addEventListener("click", submitFormValidation);

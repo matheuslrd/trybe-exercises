@@ -2,72 +2,86 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forms|Exercicio 6.1</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   </head>
   <body>
 
-    <!-- FORMULARIO -->
-    <form action="" id="formCurriculo" method="GET">
-       <!-- CABECALHO -->
-      <header class="tittle box">
+    <div class="container">
+      <!-- CABECALHO -->
+      <header class="container content">
         <h1>Currículo</h1>
       </header>
-
-      <div class="box" id="bloco1">
-        <fieldset class="fieldset-formated">
-          <legend>Dados Pessoais</legend>
-
-          <label for="fullName">Nome Completo:</label>
-          <input class="input-format" type="text" name="fullName" id="fullName" required maxlength="40" autofocus><br>
-        
-          <label for="email">Email:</label>
-          <input class="input-format" type="email" name="email" id="email" maxlength="50" required><br>
-
-          <label for="cpf">CPF:</label>
-          <input class="input-format" type="text" name="cpf" id="cpf" maxlength="11" required><br>
-
-          <label for="adress">Endereço:</label>
-          <input class="input-format" type="text" name="adress" id="adress" maxlength="200" required><br>
-
-          <label for="city">Cidade:</label>
-          <input class="input-format" type="text" name="city" id="city" maxlength="28" required><br>
-
-          <label for="states">Estado:</label><br>
-          <select name="states" id="states" class="input-format" required></select> 
-
-          <label class="radio-format" for="radioMoradaHome">Casa</label>
-          <input class="radio-format" type="radio" name="radioMorada" id="radioMoradaHome" checked>
-          <label class="radio-format" for="radioMoradaAp">Apartamento</label>
-          <input class="radio-format" type="radio" name="radioMorada" id="radioMoradaAp">
-        </fieldset>
-      </div>
-
-      <div class="box" id="bloco-2">
-        <fieldset class="fieldset-formated">
-          <legend>Dados Do Seu Ultimo Emprego</legend>
-
-          <label for="abstract">Resumo do seu curriculo:</label>
-          <textarea class="input-format" name="abstract" id="abstract" cols="30" rows="10" maxlength="1000" required></textarea>
-
-          <label for="office">Cargo:</label>
-          <input class="input-format" type="text" name="office" id="office" maxlength="40" required>
-
-          <label for="office-description">Descrição do Cargo:</label>
-          <input type="text" name="office-description" id="office-description" class="input-format" maxlength="500" required>
-
-          <label for="inittial-date-office">Data de Inicio:</label>
-          <input type="date" name="inittial-date-office" id="inittial-date-office" value="2021-04-25" class="input-format" required>
-        </fieldset>
-
-        <div class="button-submit">
-          <button type="submit" id="btn-submit">ENVIAR</button>
+      <!-- FORMULARIO -->
+      <form action="#" method="GET">
+        <!-- DADOS PESSOAIS -->
+        <div class="container content">
+          <p>Dados Pessoais</p>
+          <div>
+            <label class="label" for="fullName">Nome Completo:</label>
+            <input class="input" type="text" name="fullName" required maxlength="40" autofocus>
+          </div>
+      
+          <div>
+            <label class="label" for="email">Email:</label>
+            <input class="input" type="email" name="email" id="email" maxlength="50" placeholder="email@example.com" required>
+          </div>
+          <div>
+            <label class="label" for="cpf">CPF:</label>
+            <input class="input" type="text" name="cpf" id="cpf" maxlength="11" required>
+          </div>
+          <div>
+            <label class="label" for="adress">Endereço:</label>
+            <input class="input" type="text" name="adress" id="adress" maxlength="200" required>
+          </div>
+          <div>
+            <label class="label" for="city">Cidade:</label>
+            <input class="input" type="text" name="city" id="city" maxlength="28" required>
+          </div>
+          <div>
+            <label for="states">Estado:</label><br>
+            <select name="states" id="states" required></select>
+          </div>
+      
+          <div class="control">
+            <input type="radio" name="radioMorada" id="radioMoradaHome" checked>
+            <label class="radio" for="radioMoradaHome">Casa</label>
+            <input type="radio" name="radioMorada" id="radioMoradaAp">
+            <label class="radio" for="radioMoradaAp">Apartamento</label>
+          </div>
+      
         </div>
-      </div>
-    </form>
-    <!-- //FORMULARIO -->
+        <!-- DADOS ULTIMO EMPREGO -->
+        <div class="container content">
+          <p>Dados Do Seu Ultimo Emprego</p>
+          <div class="control">
+            <label class="label" for="abstract">Resumo do seu curriculo:</label>
+            <textarea class="textarea is-small has-fixed-size" name="abstract" id="abstract" cols="30" rows="10" maxlength="1000" required></textarea>
+          </div>
+          <div>
+            <label for="office">Cargo:</label>
+            <input type="text" name="office" id="office" maxlength="40" required>
+          </div>
+          <div>
+            <label for="office-description">Descrição do Cargo:</label>
+            <input type="text" name="office-description" id="office-description" maxlength="500" required>
+          </div>
+          <div>
+            <label for="inittial-date-office">Data de Inicio:</label>
+            <input type="date" name="inittial-date-office" id="inittial-date-office" value="2021-04-25" required>
+          </div>
+          <!-- BOTAO SUBMIT -->
+          <div>
+            <button type="submit" id="btn-submit">ENVIAR</button>
+          </div>
+        </div>
+      </form>
+      <!-- //FORMULARIO -->
+    </div>
 
-    <div class="box" id="form-consolitated">
+    <div id="form-consolitated">
       
     </div>
 
