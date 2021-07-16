@@ -63,6 +63,6 @@ function submitFormValidation(event) {
       formConsolitated.appendChild(createPar);
     }
   }
-}
 
+}
 btnSubmit.addEventListener("click", submitFormValidation);
