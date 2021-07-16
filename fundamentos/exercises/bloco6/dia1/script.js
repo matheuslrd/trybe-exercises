@@ -63,6 +63,9 @@ function submitFormValidation(event) {
       formConsolitated.appendChild(createPar);
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b301208ea9b3e093cae323aceec1e355c737c985
 }
 btnSubmit.addEventListener("click", submitFormValidation);
