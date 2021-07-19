@@ -8,7 +8,7 @@
 
 .keep {
   align-self: center;
-  background-color: #FAA488;
+  background-color: #faa488;
   display: flex;
   justify-content: center;
   width: 150px;
@@ -18,10 +18,9 @@
 .change {
   /* Altere a propriedade align-self. */
   align-self: flex-end;
-  background-color: #FBD26A;
+  background-color: #fbd26a;
   display: flex;
   justify-content: center;
   width: 200px;
   list-style: none;
 }
-
