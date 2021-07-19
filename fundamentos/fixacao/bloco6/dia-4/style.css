@@ -17,7 +17,7 @@
 
 .change {
   /* Altere a propriedade align-self. */
-  align-self: center;
+  align-self: flex-end;
   background-color: #FBD26A;
   display: flex;
   justify-content: center;
