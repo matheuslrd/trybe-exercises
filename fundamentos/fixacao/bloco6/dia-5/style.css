@@ -64,4 +64,29 @@ p strong {
 
 .card:nth-of-type(3) {
   background-color: #41197f;
+  display: block;
+}
+
+@media screen and (min-width: 500px) {
+  .cards > .card:nth-child(1) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .cards > .card:nth-child(2) {
+    display: block; 
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .cards > .card:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body > p:nth-last-child(1){
+    color: black;
+  }
 }
