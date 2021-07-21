@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: rgb(231, 231, 231);
+  font-size: 14px;
+}
+
+.container {
+  padding: 15px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.container header h1{
+  text-align: center;
+}
+
+.container header nav {
+  display: none;
+}
+
+/* CONTEÚDO */
+.container .main-content {
+  margin: 0 auto;
+}
+
+.container .main-content h1 {
+  text-align: center;
+}
+
+.container .main-content h1 span {
+  color: rgb(128, 128, 128);
+  text-shadow: 1.5px 1.8px 2.5px rgba(0, 0, 0, 0.4);
+}
+
+.container .main-content p {
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+.container footer h3{
+  text-align: center;
+}
+
+
+@media screen and (min-width: 768px){
+  body {
+    font-size: .7em;
+  }
+  
+  .container {
+    max-width: 85%;
+  }
+
+  .container header nav {
+    display: block;
+  }
+
+  .container header nav ul {
+    max-width: 40%;
+    margin: -5px auto 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container .infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container .infos .aside-one h2 {
+    text-align: center;
+  }
+
+  .container .infos .aside-two h2 {
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: .6em;
+  }
+
+  .container {
+    max-width: 80%;
+  }
+
+}

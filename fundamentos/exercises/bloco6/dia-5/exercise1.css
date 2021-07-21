@@ -1,0 +1,70 @@
+body {
+  font-size: 22px;
+  margin: 25px;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+figure {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background: rgb(231, 231, 231);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  section {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  figure {
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background: rgb(140, 140, 140);
+    margin: 25px 55px;
+  }
+
+  main {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  figure {
+    max-width: 25%;
+  }
+}
