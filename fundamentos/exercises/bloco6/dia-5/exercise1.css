@@ -16,6 +16,8 @@ img {
 }
 
 main {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -30,11 +32,19 @@ figure {
   body {
     background: rgb(231, 231, 231);
     font-size: 20px;
+    text-align: center;
+  }
+
+  section {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: justify;
   }
 
   main {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     text-align: center;
   }
 
@@ -43,8 +53,18 @@ figure {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   body {
     background: rgb(140, 140, 140);
+    margin: 25px 55px;
+  }
+
+  main {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  figure {
+    max-width: 25%;
   }
 }
