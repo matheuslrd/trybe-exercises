@@ -1,17 +1,50 @@
 body {
-
+  font-size: 22px;
+  margin: 25px;
 }
 h1 {
-
+  font-size: 1.5em;
 }
 h2 {
-
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 figure {
-    margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background: rgb(231, 231, 231);
+    font-size: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+
+  figure {
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background: rgb(140, 140, 140);
+  }
 }
