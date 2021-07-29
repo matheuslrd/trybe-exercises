@@ -5,7 +5,7 @@ const newHired = (nomeCompleto) => {
   }
 
   return objPersonHired;
-}
+};
 
 const newEmployees = (callback) => {
   const employees = {
