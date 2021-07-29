@@ -84,3 +84,28 @@ function smallerName() {
   return nameBook;
 }
 assert.strictEqual(smallerName(), 'Duna');
+
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
+
+function getNamedBook() {
+  // escreva seu código aqui
+  let book26caractere;
+
+  books.find((livro) => {
+    if (livro.name.length === 26) {
+      book26caractere = livro;
+    }
+  });
+  return book26caractere;
+}
+
+assert.deepStrictEqual(getNamedBook(), expectedResult);
