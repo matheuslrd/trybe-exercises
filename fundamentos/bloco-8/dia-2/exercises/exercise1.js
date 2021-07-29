@@ -168,3 +168,16 @@ function booksOrderedByReleaseYearDesc() {
 }
 
 assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
+
+const expectedResultttt = false;
+
+function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+  const verifiedXX = books.every((livro) => {
+    livro.author.birthYear > 1899 && livro.author.birthYear < 2000 ? true : false;
+  });
+
+  return verifiedXX;
+}
+
+assert.strictEqual(everyoneWasBornOnSecXX(), expectedResultttt);
