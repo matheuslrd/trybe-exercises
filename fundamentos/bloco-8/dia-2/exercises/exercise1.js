@@ -181,3 +181,14 @@ function everyoneWasBornOnSecXX() {
 }
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResultttt);
+
+const expectedResultl = true;
+
+function someBookWasReleaseOnThe80s() {
+  // escreva seu código aqui
+  const verifiedRelease80s = books.some((livro) => livro.releaseYear >= 1980 && livro.releaseYear < 1990);
+
+  return verifiedRelease80s;
+}
+
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResultl);
