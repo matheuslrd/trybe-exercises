@@ -84,7 +84,7 @@ function authorWith3DotsOnName() {
 
   arr.push(verified3dots[0].name);
 
-  return arr;
+  return arr[0];
 }
 
 console.log(authorWith3DotsOnName());
