@@ -31,12 +31,7 @@ const peoples = [
 // escreva filterPeople abaixo
 
 const filterPeople = (arr) => { 
-  return arr.filter((people) => {
-    const {bornIn, nationality} = people;
-    if (bornIn >= 1900 && bornIn < 2000 && nationality === 'Australian') {
-      return true;
-    }
-  });
+  return arr.filter(({bornIn, nationality}) => bornIn >= 1900 && bornIn < 2000 && nationality === 'Australian');
 };
 const filteredPeople = filterPeople(peoples);
 
