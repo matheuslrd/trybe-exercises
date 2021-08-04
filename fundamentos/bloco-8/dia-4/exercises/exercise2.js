@@ -69,17 +69,13 @@ const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Fra
 const reduceNames = () => { 
   // escreva seu código aqui
 
-  const getNames = (result, book, index, arr) => {
-    if (arr[index] === arr.length -1) { 
-      return result += book.author.name;
-    }
-    return result + book.author.name + ', ';
-  };
+  const reduceName = books.reduce((result, book, index, arr) => {
+    index === arr.length -1 ? result.push(book.author.name + '.') : result.push(book.author.name);
+    return result;
+  }, []);
+  const reduceNameJoin = reduceName.join(', ');
 
-  const reduceName = books.reduce(getNames, '');
-
-  return reduceName;
+  return reduceNameJoin;
 }
 
-console.log(reduceNames());
-/* assert.strictEqual(reduceNames(), expectedResult); */
+assert.strictEqual(reduceNames(), expectedResult);
