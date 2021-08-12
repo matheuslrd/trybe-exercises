@@ -22,18 +22,27 @@ function fetchPromisse() {
     const arr = [];
 
     for (let count = 1; count <= 10; count++) {
-      const element = arr[count];
       const randomNumber = Math.floor(Math.random() * 51);
       const randomNumberEnhance = Math.pow(randomNumber, 2);
       arr.push(randomNumberEnhance);
     }
 
     const reduceArr = arr.reduce((acc, value) => acc += value);
-    (reduceArr < 8000) ? resolve('Promise resolvida') : reject('Promise rejeitada');
+    (reduceArr < 8000) ?
+    resolve(reduceArr) : reject('É mais de oito mil! Essa promise deve estar quebrada!');
   });
 
+  const getResultDivider = (response) => {
+    const arr4Items = [2, 3, 5, 10];
+    const newArr = arr4Items.map((divider) => Math.round(response / divider));
+    return newArr;
+  }
+
   promise
-    .then((response) => console.log(response))
+    .then((response) => getResultDivider(response))
+    .then((arrNumsDivider) => arrNumsDivider)
+    .then((arrNumsDivider) => arrNumsDivider.reduce((result, value) => result += value))
+    .then((sum) => console.log(sum))
     .catch((error) => console.log(error));
 }
 
