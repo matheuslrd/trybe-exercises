@@ -14,6 +14,6 @@ describe('Valida os retornos', () => {
   });
 
   test('Testa se a mensagem de erro é "parameters must be numbers"', () => {
-    expect(() => sum(4, 5)).toThrowError(new Error('parameters must be numbers'));
+    expect(() => sum(4, '5')).toThrowError(new Error('parameters must be numbers'));
   })
 });
