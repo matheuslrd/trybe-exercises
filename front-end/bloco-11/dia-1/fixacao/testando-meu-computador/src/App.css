@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.component-div {
+  border: 2px solid blue;
+  background: aquamarine;
+  width: 100%;
+  padding: 25px;
+  margin: auto;
+  text-align: center;
+}
