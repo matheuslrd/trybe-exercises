@@ -2,9 +2,19 @@ import React from 'react';
 import './App.css';
 import Component from './Component';
 
-function App() {
+const appointments = ['Comprar Cebola', 'Ir a academia', 'Futebol as 22h'];
+
+const Task = () => {
   return (
-    <Component />
+    appointments.map((item) => <li> {item} </li>)
+  );
+}
+
+function App() {
+  return (  
+    <ol>
+      { Task() }
+    </ol>
   );
 }
 
