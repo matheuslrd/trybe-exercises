@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Component from './Component';
 
 const appointments = ['Comprar Cebola', 'Ir a academia', 'Futebol as 22h'];
 
