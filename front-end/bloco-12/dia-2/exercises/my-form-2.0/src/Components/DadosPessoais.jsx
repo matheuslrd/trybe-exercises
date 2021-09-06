@@ -1,6 +1,6 @@
 import React from "react";
-import GenericInput from "./GenericInput";
-import GenericSelect from "./GenericSelect";
+import Input from "./Input";
+import Select from "./Select";
 import country from "../country";
 
 class DadosPessoais extends React.Component {
@@ -20,6 +20,12 @@ class DadosPessoais extends React.Component {
     };
   }
 
+  handleAdress = (value) => {
+    //Validação do campo endereço
+  };
+
+  handleCity = () => {};
+
   handleInput({ target }) {
     const { name, value } = target;
     this.setState({ [name]: value });
@@ -28,7 +34,7 @@ class DadosPessoais extends React.Component {
   render() {
     return (
       <>
-        <GenericInput
+        <Input
           className="input-form"
           onChange={this.handleInput}
           name="name"
@@ -38,7 +44,7 @@ class DadosPessoais extends React.Component {
           value={this.state.name}
         />
 
-        <GenericInput
+        <Input
           className="input-form"
           onChange={this.handleInput}
           name="email"
@@ -48,7 +54,7 @@ class DadosPessoais extends React.Component {
           value={this.state.email}
         />
 
-        <GenericInput
+        <Input
           className="input-form"
           onChange={this.handleInput}
           name="cpf"
@@ -58,7 +64,7 @@ class DadosPessoais extends React.Component {
           value={this.state.cpf}
         />
 
-        <GenericInput
+        <Input
           className="input-form"
           onChange={this.handleInput}
           name="adress"
@@ -68,7 +74,7 @@ class DadosPessoais extends React.Component {
           value={this.state.adress}
         />
 
-        <GenericInput
+        <Input
           className="input-form"
           onChange={this.handleInput}
           name="city"
@@ -78,34 +84,34 @@ class DadosPessoais extends React.Component {
           value={this.state.city}
         />
 
-        <GenericSelect
-          className="input-form"
+        <Select
+          className="select-form"
           name="country"
           description="Estado: "
-          listCountry={country.map((country) => (
-            <option> {country} </option>
+          listCountry={country.map((country, index) => (
+            <option key={country + index}> {country} </option>
           ))}
           onChange={this.handleInput}
         />
 
-        <section className="input-format">
-          <GenericInput
-            className="input-format"
+        <section className="input-radio-format">
+          <label htmlFor="complement">Complemento: </label> <br />
+          <Input
             onChange={this.handleInput}
-            name="house"
+            name="complement"
             type="radio"
-            description="Complemento: "
-            value={this.state.complement}
-          />{" "}
-          Casa
-          <GenericInput
-            className="input-format"
+            description="Casa"
+            id="casa"
+            value="Casa"
+          />
+          <Input
             onChange={this.handleInput}
-            name="house"
+            name="complement"
             type="radio"
-            value={this.state.complement}
-          />{" "}
-          Apartamento
+            id="apartamento"
+            description="Apartamento"
+            value="Apartamento"
+          />
         </section>
       </>
     );
