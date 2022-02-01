@@ -1,8 +1,6 @@
 const { expect } = require('chai');
 
-const MoviesModel = {
-  create: () => {},
-};
+const MoviesModel = require('../../model/movieModel');
 
 describe('Insere um novo filme no BD', () => {
   const payloadMovie = {
@@ -11,7 +9,7 @@ describe('Insere um novo filme no BD', () => {
     releaseYear: 1999,
   };
 
-  describe('quando é inserido com sucesso', () => {
+  describe('quando é inserido com sucesso', async () => {
 
     it('retorna um objeto', async () => {
       const response = await MoviesModel.create(payloadMovie);
@@ -19,7 +17,7 @@ describe('Insere um novo filme no BD', () => {
       expect(response).to.be.a('object');
     });
 
-    it('tal objeto possui o "id" do filme inserido', () => {
+    it('tal objeto possui o "id" do filme inserido', async () => {
       const response = await MoviesModel.create(payloadMovie);
 
       expect(response).to.have.a.property('id');
