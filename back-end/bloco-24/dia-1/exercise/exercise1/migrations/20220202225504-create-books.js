@@ -23,7 +23,7 @@ const Books = {
       },
       createAt: {
         allowNull: false,
-        type: Sequelize.date
+        type: Sequelize.DATE
       },
     });
   },
