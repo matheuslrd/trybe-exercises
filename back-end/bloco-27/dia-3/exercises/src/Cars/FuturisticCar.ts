@@ -1,4 +1,4 @@
-import { IVehicle } from "./interfaces/Vehicle/IVehicle";
+import { IVehicle } from "../interfaces/Vehicle/IVehicle";
 
 // ./FuturisticCar.ts
 export default class FuturisticCar implements IVehicle {
