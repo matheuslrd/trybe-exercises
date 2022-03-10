@@ -1,12 +1,18 @@
-import { IVehicle } from "../interfaces/Vehicle/IVehicle";
+import { IVehicleDrive } from "../interfaces/Vehicle/IVehicle";
 
-class Car implements IVehicle {
-  drive(): void {
-    console.log('O carro está andando');
+class Car implements IVehicleDrive {
+  public pilot: string;
+
+  constructor(pilot: string) {
+    this.pilot = pilot;
   }
 
-  fly(): void {
-    throw new Error("I don't fly");
+  howToPilot(): void {
+    console.log(`Olá, eu ${this.pilot} sou a `);
+  }
+
+  drive(): void {
+    console.log('O carro está andando');
   }
 }
 

@@ -1,4 +1,12 @@
 export interface IVehicle {
-  drive(): void;
+  pilot: string;
+  howToPilot(): void;
+}
+
+export interface IVehicleFly extends IVehicle {
   fly(): void;
+}
+
+export interface IVehicleDrive extends IVehicle {
+  drive(): void;
 }
