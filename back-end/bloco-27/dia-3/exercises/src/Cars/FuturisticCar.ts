@@ -1,6 +1,6 @@
-import { IVehicleFly } from "../interfaces/Vehicle/IVehicle";
+import { IFuturisticVehicle, IVehicle } from "../interfaces/Vehicle/IVehicle";
 
-export default class FuturisticCar implements IVehicleFly {
+export default class FuturisticCar implements IFuturisticVehicle {
   public pilot: string;
 
   constructor(pilot: string) {
@@ -11,5 +11,11 @@ export default class FuturisticCar implements IVehicleFly {
     console.log(`Olá, sou ${this.pilot} e vou dirigir este veiculo!`)
   }
 
-  fly(): void { console.log('Flying a futuristic car'); }
+  drive(): void {
+    console.log('Driving a futuristic car');
+  }
+
+  fly(): void {
+    console.log('Flying a futuristic car');
+  }
 }

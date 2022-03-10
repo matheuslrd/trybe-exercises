@@ -10,3 +10,8 @@ export interface IVehicleFly extends IVehicle {
 export interface IVehicleDrive extends IVehicle {
   drive(): void;
 }
+
+export interface IFuturisticVehicle extends IVehicle {
+  fly(): void;
+  drive(): void;
+}
